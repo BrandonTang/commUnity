@@ -38,31 +38,28 @@ def index():
     #     print(user.val())
     # user_ids = db.child("users").shallow().get()
     # Maps Section
-    mymap = Map(
-        identifier="sndmap",
+    community_map = Map(
+        identifier="community_map",
         zoom=16,
         lat=40.6939904,
         lng=-73.98656399999999,
-        # markers=[(40.6939904,-73.98656399999999)],
-        # markers=[
-        #     {
-        #         'icon': 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
-        #         'lat': 40.6939904,
-        #         'lng': -73.98656399999999,
-        #         'infobox': "<b>Current Location</b>"
-        #     },
-        #     {
-        #         'icon': 'http://maps.google.com/mapfiles/ms/icons/red-dot.png',
-        #         'lat': 40.693364,
-        #         'lng': -73.98571470000002,
-        #         'infobox': "<b>Five Guys</b>"
-        #     }
-        # ],
-        markers={icons.dots.green: [(40.693364, -73.98571470000002, "Five Guys")],
-                 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png': [(40.6939904, -73.98656399999999, "Current Location")]},
-        style="height:60%;width:100%;margin-top:15%;"
+        markers=[
+            {
+                'icon': 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
+                'lat': 40.6939904,
+                'lng': -73.98656399999999,
+                'infobox': "Current Location"
+            },
+            {
+                'icon': 'http://maps.google.com/mapfiles/ms/icons/red-dot.png',
+                'lat': 40.693364,
+                'lng': -73.98571470000002,
+                'infobox': "Five Guys"
+            }
+        ],
+        style="height:60%;width:100%;margin-top:15%;color:black;"
     )
-    return render_template('index.html', mymap=mymap)
+    return render_template('index.html', community_map=community_map)
 
 
 if __name__ == "__main__":
