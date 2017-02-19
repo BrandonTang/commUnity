@@ -40,6 +40,7 @@ def index():
         'infobox': "Current Location"
     }]
     for project in all_projects.each():
+        print(project.val())
         name = project.val()['name']
         description = project.val()['description']
         latitude = project.val()['latitude']
