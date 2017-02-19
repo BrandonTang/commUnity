@@ -52,6 +52,7 @@ def index():
         lat=40.6939904,
         lng=-73.98656399999999,
         markers=markers_list,
+        scroll_wheel=False,
         style="height:60%;width:100%;color:black;"
     )
     return render_template('index.html', community_map=community_map)
@@ -87,6 +88,7 @@ def projects():
         lat=40.6939904,
         lng=-73.98656399999999,
         markers=markers_list,
+        scroll_wheel=False,
         style="height:60%;width:100%;color:black;"
     )
     # Project List
