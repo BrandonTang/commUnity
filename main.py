@@ -1,10 +1,6 @@
-import os
 import operator
 import requests
-import json
-import hashlib
 import pyrebase
-import sqlite3 as sql
 from flask import Flask, render_template, request, session, url_for, redirect, flash
 from flask_googlemaps import GoogleMaps, Map, icons
 from geopy.distance import vincenty
